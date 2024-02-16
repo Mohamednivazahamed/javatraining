@@ -1,0 +1,5 @@
+Spring:
+  application:
+    name: HelloClient
+Server:
+    port: 8095
