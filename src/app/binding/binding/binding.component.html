@@ -1,0 +1,91 @@
+<p>binding works! {{topic}}</p>
+
+<hr>
+    <h2>Available produts</h2>
+    <h3>Porduct id : {{productId}}</h3>
+    <h3> Description : {{description}}</h3>
+    <h3>Quantity : {{qty}}</h3>
+    <h3>Price : {{price}} </h3>
+
+    <div *ngIf="isqtyavailable; else notavail">
+    
+        <h3>Available :<span [style.background-color]="available"> 
+            &nbsp;&nbsp;&nbsp;</span></h3></div>
+        
+        <ng-template #notavail>
+            <h3>Available :<span [style.background-color]="notavailable"> 
+                &nbsp;&nbsp;&nbsp;</span></h3>     
+            
+        </ng-template>
+
+    <hr>
+    <div *ngIf="isMember; else nonmember">
+        <h3>Member Area</h3>
+        <h4>You are eligible for 500 Gb free download</h4>
+    </div>
+    <ng-template #nonmember>
+        <h4> hurray  !! Regsiter available huge offers </h4>
+
+    </ng-template>
+
+    <h3> Delivery :
+        <span [style.background-color]="delivery">&nbsp;&nbsp;&nbsp;</span>
+    </h3>
+
+        <h3> Enter Order Quantity  :
+            <input type="number" [(ngModel)] ="orderedqty" />
+
+
+        </h3>
+        <h3> You have enetered  :  {{orderedqty}} units</h3>
+
+        <hr>
+
+        <h3> Plcae order --
+            <button type="button" (click)="takeOrder()"> Place Orders</button>
+        </h3>
+
+        <hr>
+
+        <div>
+            <h2> Products list</h2>
+            <table border = "2" style="padding: 10px;">
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Quantity</th>
+            </thead>
+            <tr *ngFor="let product of products">
+                <td>{{product.id}}</td>
+<td>{{product.name}}</td>
+<td>{{product.description}}</td>
+<td>{{product.price}}</td>
+<td>{{product.quantity}}</td>
+            </tr>
+            
+            
+            </table>
+
+            <br>
+           
+        <div>
+            <h2> Products list</h2>
+            <table border = "2" style="padding: 10px;">
+            <thead>
+                <th>item ID</th>
+                <th>item Name</th>
+                <th>item Price</th>
+                <th>item Description</th>
+                <th>item Quantity</th>
+            </thead>
+            <tr *ngFor="let i of items">
+                <td>{{i.itemCode}}</td>
+<td>{{i.name}}</td>
+<td>{{i.description}}</td>
+<td>{{i.price}}</td>
+<td>{{i.qty}}</td>
+            </tr>
+        </table>
+        </div>

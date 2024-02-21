@@ -1,0 +1,21 @@
+<p>http works!</p>
+
+<div>
+    <h2> data list</h2>
+    <table border = "2" style="padding: 10px;">
+    <thead>
+        <th>userID</th>
+        <th>id</th>
+        <th>title</th>
+        <th>completed/th>
+        
+    </thead>
+    <tr *ngFor="let unit of data">
+        <td>{{unit.userId}}</td>
+        <td>{{unit.id}}</td>
+        <td>{{unit.title}}</td>
+        <td>{{unit.completed}}</td>
+    </tr>
+    
+    
+    </table>

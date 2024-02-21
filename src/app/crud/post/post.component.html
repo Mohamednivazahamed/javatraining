@@ -1,0 +1,15 @@
+<p>post works!</p>
+<hr>
+<h3>Create a Product</h3>
+<form (ngSubmit)="onSubmit()">
+<div class="form-group">
+<label for="">Description</label>
+<input type="text" class="form-control" id="description"
+        [(ngModel)]="product.description" name="description">
+<label for="">Amount</label>
+<input type="text" class="form-control" id="amount"
+        [(ngModel)]="product.p_amount" name="amount">
+</div>
+<button class="btn btn-success" type="submit"> submit</button>
+</form>
+

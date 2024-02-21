@@ -1,0 +1,23 @@
+<p>fetch works!</p>
+
+<div>
+    <h2> data list</h2>
+    <table border = "2" style="padding: 10px;">
+    <thead>
+       
+        <th>id</th>
+        <th>title</th>
+        <th>amount</th>
+        
+    </thead>
+    <tr *ngFor="let unit of products">
+        <td>{{unit.pid}}</td>
+        <td>{{unit.description}}</td>
+        <td>{{unit.p_amount}}</td>
+     
+    </tr>
+    
+    
+    </table>
+</div>
+
